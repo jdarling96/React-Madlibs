@@ -6,7 +6,7 @@ function addCommas(num) {
     for (let i = afterDecimal; i > 0; i -= 3) {
       numToArr.splice(i, 0, ",");
     }
-    numToArr.splice(numToArr.indexOf(".") - 1, 1);
+    numToArr.splice(numToArr.indexOf(".") - 1, 1)
     return numToArr.join("");
   } else {
     for (let i = numToArr.length; i > 0; i -= 3) {
@@ -18,6 +18,6 @@ function addCommas(num) {
   }
 }
 
-addCommas(-3141592.65);
+
 
 module.exports = addCommas;
