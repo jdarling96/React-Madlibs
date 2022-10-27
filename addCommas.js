@@ -1,17 +1,23 @@
 function addCommas(num) {
-    const numToArr = new Array(...num.toString())
-    const idx = numToArr.length - 1
-    for(let i = numToArr.length; i > 0; i -= 3) {
-        numToArr.splice(i, 0, ',')
-       
+  const numToArr = new Array(...num.toString());
+
+  if (numToArr.includes(".")) {
+    const afterDecimal = numToArr.indexOf(".");
+    for (let i = afterDecimal; i > 0; i -= 3) {
+      numToArr.splice(i, 0, ",");
+    }
+    numToArr.splice(numToArr.indexOf(".") - 1, 1);
+    return numToArr.join("");
+  } else {
+    for (let i = numToArr.length; i > 0; i -= 3) {
+      numToArr.splice(i, 0, ",");
     }
 
-   
-   numToArr.pop()
-   console.log(numToArr.join(''))
-
+    numToArr.pop();
+    return numToArr.join("");
+  }
 }
 
-addCommas(1000000)
+addCommas(-3141592.65);
 
 module.exports = addCommas;
