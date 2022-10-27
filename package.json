@@ -4,6 +4,7 @@
   "description": "",
   "main": "addCommas.js",
   "scripts": {
+    "start":"nodemon addCommas.js",
     "test": "jest addCommas.test.js"
   },
   "keywords": [],
