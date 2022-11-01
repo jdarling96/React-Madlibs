@@ -44,4 +44,12 @@ describe("#addCommas", () => {
    const resp = addCommas(-51234.32)
    expect(resp).toEqual('-51,234.32')
   });
+  test("should work with negative decimal numbers", () => {
+   const resp = addCommas(-999)
+   expect(resp).toEqual('-999')
+  });
+  test("should work with negative decimal numbers", () => {
+   const resp = addCommas(-999.999)
+   expect(resp).toEqual('-999.999')
+  });
 });
