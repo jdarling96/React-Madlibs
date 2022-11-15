@@ -26,6 +26,7 @@ const MadlibForm = ({ createStory }) => {
 
 
     return (
+    
         <form onSubmit={handleSubmit}>
             
             <input id="noun" name="noun" placeholder="noun" type="text"

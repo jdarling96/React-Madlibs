@@ -4,13 +4,7 @@ const MadlibStories = ({initialStory}) => {
 
 
     const INITIAL_STATE = {
-        s1:{p1:"In a ",
-            p2:"house there was a",
-            p3: "who loved "},
-        
-        s2:{p1:"the very ",
-        p2:"there was a bright",
-        p3: "who loved "}   
+       story: story.split("/")
         
     }
 
@@ -44,6 +38,8 @@ const MadlibStories = ({initialStory}) => {
            </select>
            <button>Choose!</button>
         </form>
+
+
     )
 
 } 
